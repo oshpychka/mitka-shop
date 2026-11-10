@@ -14,7 +14,7 @@ passport-cover: Attila Janosi — https://unsplash.com/@attilajanosi
 key-holder-leather: La Compagnie Robinson — https://unsplash.com/@lacompagnierobinson
 leather-belt: Fashion Needles — https://unsplash.com/@fashionneedles
 leather-keychain: Sayan Majhi — https://unsplash.com/@minimalsayan
-apron-leather: Fábio  Alves — https://unsplash.com/@barncreative
+apron-leather: moniek van rosse — https://unsplash.com/@moniek365
 wooden-watch: Aditya Sethia — https://unsplash.com/@aditya_sethia_97
 cufflinks: Menna Ahmed — https://unsplash.com/@mennahmedhelmi_
 tie-clip: Jaymeson Asuncion — https://unsplash.com/@jaymeson
@@ -34,7 +34,7 @@ family-sign: iridial — https://unsplash.com/@iridial_
 photo-frame: César Cabrera — https://unsplash.com/@gaiostudio
 wall-key-holder: Puscas Adryan — https://unsplash.com/@adryan_studio
 night-light: Declan Sun — https://unsplash.com/@declansun
-star-map-board: Seyedeh Hamideh Kazemi — https://unsplash.com/@shkazemi
+star-map-board: Scott Lord — https://unsplash.com/@darkcatimages
 wall-clock: Alexander Schimmeck — https://unsplash.com/@alschim
 christmas-ornaments: Galina Nelyubova — https://unsplash.com/@galka_nz
 wine-glasses-pair: Michael Oeser — https://unsplash.com/@michaeloeser
@@ -59,3 +59,4 @@ carpathian-tea: Daniela mo — https://unsplash.com/@danusch
 dark-chocolate-salt: Rūta Celma — https://unsplash.com/@turutututuu
 milk-chocolate-nuts: Mockup Graphics — https://unsplash.com/@mockupgraphics
 soy-candle: Dear Scrub — https://unsplash.com/@dearscrub
+buckwheat-honey: Amanda Payne — https://unsplash.com/@amanda_brighton_payne
