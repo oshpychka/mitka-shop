@@ -1,0 +1,13 @@
+node_modules/
+vendor/
+assets/build/
+test-results/
+playwright-report/
+.wp-env.override.json
+.env
+*.log
+*.zip
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

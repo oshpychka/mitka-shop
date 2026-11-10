@@ -1,0 +1,52 @@
+{
+	"name": "mitka",
+	"version": "1.0.0",
+	"private": true,
+	"description": "WooCommerce theme for Mitka, a workshop of engraved gifts and gift boxes.",
+	"author": "SashaShp",
+	"license": "GPL-2.0-or-later",
+	"engines": {
+		"node": ">=24"
+	},
+	"browserslist": [
+		"> 0.5% in UA",
+		"last 2 versions",
+		"not dead"
+	],
+	"scripts": {
+		"dev": "webpack --mode development --watch",
+		"build": "webpack --mode production",
+		"lint:js": "eslint .",
+		"lint:css": "stylelint \"src/scss/**/*.scss\"",
+		"lint:php": "composer lint",
+		"lint": "npm run lint:js && npm run lint:css && npm run lint:php",
+		"format": "prettier --write \"src/**/*.{js,scss}\" \"tests/**/*.js\"",
+		"env:start": "wp-env start",
+		"env:stop": "wp-env stop",
+		"seed": "bash scripts/seed.sh",
+		"photos": "node scripts/photos.mjs",
+		"export": "node scripts/export-static.mjs",
+		"test:e2e": "playwright test"
+	},
+	"devDependencies": {
+		"@eslint/js": "10.0.1",
+		"@playwright/test": "1.64.1",
+		"@wordpress/env": "12.0.0",
+		"autoprefixer": "10.6.1",
+		"css-loader": "7.1.5",
+		"css-minimizer-webpack-plugin": "8.0.0",
+		"eslint": "10.13.0",
+		"globals": "17.13.0",
+		"mini-css-extract-plugin": "2.10.2",
+		"postcss": "8.5.31",
+		"postcss-loader": "8.2.1",
+		"prettier": "3.9.10",
+		"sass": "1.106.1",
+		"sass-loader": "17.0.1",
+		"stylelint": "17.16.0",
+		"stylelint-config-standard-scss": "17.0.0",
+		"webpack": "5.112.2",
+		"webpack-cli": "7.2.3"
+	},
+	"type": "module"
+}

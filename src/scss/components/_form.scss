@@ -1,0 +1,295 @@
+@use '../abstracts/mixins' as *;
+
+.field {
+	display: grid;
+	gap: var(--s-2);
+	margin-bottom: var(--s-4);
+}
+
+.field__label,
+.form-row label {
+	font-size: var(--fs-sm);
+	font-weight: 600;
+
+	.required {
+		color: var(--c-laser-strong);
+		text-decoration: none;
+	}
+
+	.optional {
+		color: var(--c-muted);
+		font-weight: 400;
+	}
+}
+
+.field__error {
+	min-height: 1.3em;
+	margin: 0;
+	color: var(--c-error);
+	font-size: var(--fs-sm);
+}
+
+.input,
+input[type='text'],
+input[type='email'],
+input[type='tel'],
+input[type='password'],
+input[type='number'],
+input[type='search'],
+input[type='url'],
+input[type='date'],
+select,
+textarea {
+	width: 100%;
+	min-height: 48px;
+	padding: 0 var(--s-4);
+	border: 1px solid var(--c-line);
+	border-radius: var(--r-input);
+	background: var(--c-bg);
+	font-size: 16px;
+	transition:
+		border-color var(--t-fast) var(--ease),
+		box-shadow var(--t-fast) var(--ease),
+		background-color var(--t-fast) var(--ease);
+	appearance: none;
+
+	&:hover {
+		background: var(--c-surface);
+	}
+
+	&:focus {
+		outline: none;
+		border-color: var(--c-ink);
+		background: var(--c-bg);
+		box-shadow: 0 0 0 4px rgb(226 73 43 / 18%);
+	}
+
+	&[aria-invalid='true'] {
+		border-color: var(--c-error);
+	}
+
+	&::placeholder {
+		color: var(--c-muted);
+	}
+
+	&:-webkit-autofill {
+		box-shadow: 0 0 0 100px var(--c-surface) inset;
+		-webkit-text-fill-color: var(--c-ink);
+	}
+}
+
+input[type='search']::-webkit-search-cancel-button {
+	appearance: none;
+}
+
+textarea {
+	min-height: 120px;
+	padding-block: var(--s-3);
+	resize: none;
+	field-sizing: content;
+}
+
+select {
+	padding-right: var(--s-7);
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23151515' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9.5 6 6 6-6'/%3E%3C/svg%3E");
+	background-position: right 14px center;
+	background-repeat: no-repeat;
+	background-size: 20px;
+	cursor: pointer;
+}
+
+input[type='checkbox'],
+input[type='radio'] {
+	display: inline-grid;
+	place-items: center;
+	flex: none;
+	width: 22px;
+	height: 22px;
+	margin: 0;
+	border: 1.5px solid var(--c-muted);
+	background: var(--c-bg);
+	cursor: pointer;
+	appearance: none;
+	transition:
+		border-color var(--t-fast) var(--ease),
+		background-color var(--t-fast) var(--ease);
+
+	&:focus-visible {
+		@include focus-ring;
+	}
+
+	&:checked {
+		border-color: var(--c-ink);
+		background: var(--c-ink);
+	}
+}
+
+input[type='checkbox'] {
+	border-radius: 6px;
+
+	&::after {
+		content: '';
+		width: 10px;
+		height: 6px;
+		border: solid var(--c-on-ink);
+		border-width: 0 0 2px 2px;
+		transform: translateY(-1px) rotate(-45deg) scale(0);
+		transition: transform var(--t-fast) var(--ease);
+	}
+
+	&:checked::after {
+		transform: translateY(-1px) rotate(-45deg) scale(1);
+	}
+}
+
+input[type='radio'] {
+	border-radius: 50%;
+
+	&::after {
+		content: '';
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		background: var(--c-on-ink);
+		transform: scale(0);
+		transition: transform var(--t-fast) var(--ease);
+	}
+
+	&:checked::after {
+		transform: scale(1);
+	}
+}
+
+.check {
+	display: flex;
+	align-items: center;
+	gap: var(--s-3);
+	min-height: 44px;
+	cursor: pointer;
+}
+
+.stepper {
+	display: inline-flex;
+	align-items: center;
+	height: 48px;
+	border: 1px solid var(--c-line);
+	border-radius: var(--r-pill);
+
+	button {
+		display: grid;
+		place-items: center;
+		width: 44px;
+		height: 100%;
+		padding: 0;
+		border: 0;
+		background: none;
+
+		.icon {
+			width: 18px;
+			height: 18px;
+		}
+
+		&:disabled {
+			opacity: 0.35;
+		}
+	}
+
+	input[type='number'] {
+		width: 40px;
+		min-height: 0;
+		height: 100%;
+		padding: 0;
+		border: 0;
+		background: none;
+		font-weight: 700;
+		text-align: center;
+		appearance: textfield;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			appearance: none;
+			margin: 0;
+		}
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+// Any label wrapping a checkbox or radio: box aligned to the first line of
+// text, a fixed gap, wrapped lines start under the text, whole row clickable.
+label:has(> input[type='checkbox']),
+label:has(> input[type='radio']),
+.woocommerce-form__label-for-checkbox {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: var(--s-3);
+	min-height: 44px;
+	padding-block: 11px;
+	font-weight: 500;
+	line-height: 22px;
+	cursor: pointer;
+
+	> input {
+		margin: 0;
+	}
+
+	> span {
+		min-width: 0;
+	}
+}
+
+// Quantity with − / + buttons (quantity.js).
+.quantity.has-steppers {
+	display: inline-flex;
+	align-items: center;
+	height: 52px;
+	border: 1px solid var(--c-line);
+	border-radius: var(--r-pill);
+	background: var(--c-bg);
+
+	.qty {
+		width: 44px;
+		min-height: 0;
+		height: 100%;
+		padding: 0;
+		border: 0;
+		border-radius: 0;
+		background: none;
+		font-weight: 700;
+		text-align: center;
+		appearance: textfield;
+
+		&::-webkit-inner-spin-button,
+		&::-webkit-outer-spin-button {
+			margin: 0;
+			appearance: none;
+		}
+
+		&:focus {
+			box-shadow: none;
+		}
+	}
+}
+
+.quantity__btn {
+	display: grid;
+	place-items: center;
+	width: 44px;
+	height: 100%;
+	padding: 0;
+	border: 0;
+	border-radius: var(--r-pill);
+	background: none;
+	color: var(--c-ink);
+
+	.icon {
+		width: 18px;
+		height: 18px;
+	}
+
+	&:hover {
+		background: var(--c-surface);
+	}
+}

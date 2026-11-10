@@ -1,0 +1,87 @@
+/* Demo copy only: instant search results and hidden server-only controls. */
+
+/* Sorting reloads the page on the server; a static copy cannot do it. */
+.woocommerce-ordering {
+	display: none;
+}
+
+.demo-search {
+	position: absolute;
+	top: calc(100% + 8px);
+	right: 0;
+	left: 0;
+	z-index: 60;
+	display: grid;
+	max-height: min(70vh, 520px);
+	padding: 8px;
+	overflow-y: auto;
+	border: 1px solid var(--c-line);
+	border-radius: var(--r-card);
+	background: var(--c-bg);
+	box-shadow: var(--shadow-float);
+}
+
+.demo-search[hidden] {
+	display: none;
+}
+
+.demo-search__item {
+	display: grid;
+	grid-template-columns: 48px minmax(0, 1fr) auto;
+	align-items: center;
+	gap: 12px;
+	padding: 8px;
+	border-radius: var(--r-input);
+	text-decoration: none;
+}
+
+.demo-search__item:hover,
+.demo-search__item:focus-visible {
+	background: var(--c-surface);
+}
+
+.demo-search__img {
+	width: 48px;
+	height: 48px;
+	border-radius: 8px;
+	background: var(--c-surface);
+	overflow: hidden;
+}
+
+.demo-search__img img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.demo-search__text {
+	display: grid;
+	min-width: 0;
+}
+
+.demo-search__name {
+	overflow: hidden;
+	font-size: var(--fs-sm);
+	font-weight: 600;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.demo-search__meta {
+	overflow: hidden;
+	color: var(--c-muted);
+	font-size: var(--fs-xs);
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.demo-search__price {
+	font-size: var(--fs-sm);
+}
+
+.demo-search__empty {
+	margin: 0;
+	padding: 12px;
+	color: var(--c-muted);
+	font-size: var(--fs-sm);
+}

@@ -1,0 +1,638 @@
+# Copyright (C) 2026 SashaShp
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mitka 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mitka\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-10T08:55:34+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mitka\n"
+
+#. Theme Name of the theme
+#: style.css
+#: inc/options.php:63
+msgid "Mitka"
+msgstr ""
+
+#. Theme URI of the theme
+#: style.css
+msgid "https://github.com/SashaShp/mitka"
+msgstr ""
+
+#. Description of the theme
+#: style.css
+msgid "WooCommerce theme for Mitka, a Ukrainian workshop of laser-engraved gifts and custom gift boxes. Live engraving preview, gift box builder, Nova Poshta checkout and a catalog chat."
+msgstr ""
+
+#. Author of the theme
+#: style.css
+msgid "SashaShp"
+msgstr ""
+
+#: 404.php:8
+msgid "This page is not here"
+msgstr ""
+
+#: 404.php:9
+msgid "The link may be old or have a typo. Try the search or start from the catalog."
+msgstr ""
+
+#: 404.php:12
+msgid "Go to catalog"
+msgstr ""
+
+#: 404.php:13
+msgid "Home page"
+msgstr ""
+
+#: front-page.php:43
+msgid "Pick a gift"
+msgstr ""
+
+#: front-page.php:44
+msgid "Boards, leather, glass and ready boxes from small Ukrainian workshops."
+msgstr ""
+
+#: front-page.php:47
+msgid "Add your words"
+msgstr ""
+
+#: front-page.php:48
+msgid "Type a name, a date or a few warm words and see right away how the engraving will look."
+msgstr ""
+
+#: front-page.php:51
+msgid "We engrave and ship"
+msgstr ""
+
+#: front-page.php:52
+msgid "Ready in 1–2 days, sent by Nova Poshta. You pay on delivery after checking it."
+msgstr ""
+
+#: front-page.php:59
+msgid "Laser workshop in Lviv"
+msgstr ""
+
+#: front-page.php:60
+msgid "Gifts that carry your words"
+msgstr ""
+
+#: front-page.php:61
+msgid "We engrave names, dates and wishes on things made by Ukrainian craftspeople, and pack them into boxes that are a joy to open."
+msgstr ""
+
+#: front-page.php:63
+msgid "Choose a gift"
+msgstr ""
+
+#: front-page.php:65
+#: front-page.php:154
+msgid "Ready gift boxes"
+msgstr ""
+
+#: front-page.php:69
+msgid "1–2 days"
+msgstr ""
+
+#: front-page.php:69
+msgid "to engrave"
+msgstr ""
+
+#: front-page.php:70
+msgid "Free"
+msgstr ""
+
+#: front-page.php:70
+msgid "engraving on every item"
+msgstr ""
+
+#: front-page.php:71
+msgid "Payment"
+msgstr ""
+
+#: front-page.php:71
+msgid "on delivery"
+msgstr ""
+
+#: front-page.php:81
+msgctxt "hero engraving sample"
+msgid "Home is you"
+msgstr ""
+
+#: front-page.php:90
+#: header.php:24
+#: template-parts/footer/footer.php:23
+#: template-parts/header/mobile-menu.php:19
+msgid "Catalog"
+msgstr ""
+
+#: front-page.php:91
+msgid "All products"
+msgstr ""
+
+#. translators: %d: number of products.
+#: front-page.php:101
+#, php-format
+msgid "%d product"
+msgid_plural "%d products"
+msgstr[0] ""
+msgstr[1] ""
+
+#: front-page.php:113
+msgid "Who is it for?"
+msgstr ""
+
+#: front-page.php:126
+msgid "Popular now"
+msgstr ""
+
+#: front-page.php:127
+msgid "See all"
+msgstr ""
+
+#: front-page.php:138
+msgid "How it works"
+msgstr ""
+
+#: front-page.php:157
+msgid "All boxes"
+msgstr ""
+
+#: front-page.php:170
+msgid "The people who make it"
+msgstr ""
+
+#: header.php:13
+msgid "Skip to content"
+msgstr ""
+
+#: header.php:19
+msgid "Open menu"
+msgstr ""
+
+#: header.php:30
+#: template-parts/header/mobile-menu.php:49
+msgid "Primary"
+msgstr ""
+
+#: inc/checkout.php:21
+#: inc/checkout.php:55
+#: template-parts/product/engraving-fields.php:59
+msgid "City"
+msgstr ""
+
+#: inc/checkout.php:22
+msgid "For example, Lviv"
+msgstr ""
+
+#: inc/checkout.php:26
+#: inc/checkout.php:59
+msgid "Nova Poshta branch"
+msgstr ""
+
+#: inc/checkout.php:27
+#: inc/checkout.php:60
+msgid "Branch or parcel locker number"
+msgstr ""
+
+#: inc/checkout.php:92
+msgid "Enter the phone as +380 (XX) XXX XX XX."
+msgstr ""
+
+#: inc/engraving.php:15
+msgid "Classic"
+msgstr ""
+
+#: inc/engraving.php:16
+msgid "Handwritten"
+msgstr ""
+
+#: inc/engraving.php:17
+msgid "Modern"
+msgstr ""
+
+#: inc/engraving.php:26
+msgid "Kyiv"
+msgstr ""
+
+#: inc/engraving.php:27
+msgid "Lviv"
+msgstr ""
+
+#: inc/engraving.php:28
+msgid "Kharkiv"
+msgstr ""
+
+#: inc/engraving.php:29
+msgid "Odesa"
+msgstr ""
+
+#: inc/engraving.php:30
+msgid "Dnipro"
+msgstr ""
+
+#: inc/engraving.php:31
+msgid "Zaporizhzhia"
+msgstr ""
+
+#: inc/engraving.php:32
+msgid "Vinnytsia"
+msgstr ""
+
+#: inc/engraving.php:33
+msgid "Poltava"
+msgstr ""
+
+#: inc/engraving.php:34
+msgid "Chernihiv"
+msgstr ""
+
+#: inc/engraving.php:35
+msgid "Cherkasy"
+msgstr ""
+
+#: inc/engraving.php:36
+msgid "Zhytomyr"
+msgstr ""
+
+#: inc/engraving.php:37
+msgid "Sumy"
+msgstr ""
+
+#: inc/engraving.php:38
+msgid "Khmelnytskyi"
+msgstr ""
+
+#: inc/engraving.php:39
+msgid "Rivne"
+msgstr ""
+
+#: inc/engraving.php:40
+msgid "Lutsk"
+msgstr ""
+
+#: inc/engraving.php:41
+msgid "Ternopil"
+msgstr ""
+
+#: inc/engraving.php:42
+msgid "Ivano-Frankivsk"
+msgstr ""
+
+#: inc/engraving.php:43
+msgid "Uzhhorod"
+msgstr ""
+
+#: inc/engraving.php:44
+msgid "Chernivtsi"
+msgstr ""
+
+#: inc/engraving.php:45
+msgid "Kropyvnytskyi"
+msgstr ""
+
+#: inc/engraving.php:46
+msgid "Mykolaiv"
+msgstr ""
+
+#: inc/engraving.php:47
+msgid "Kherson"
+msgstr ""
+
+#: inc/engraving.php:48
+msgid "Kryvyi Rih"
+msgstr ""
+
+#: inc/engraving.php:49
+msgid "Bila Tserkva"
+msgstr ""
+
+#: inc/engraving.php:113
+msgid "This item cannot be engraved."
+msgstr ""
+
+#. translators: %d: maximum number of lines.
+#: inc/engraving.php:119
+#, php-format
+msgid "Engraving fits at most %d lines."
+msgstr ""
+
+#. translators: %d: maximum characters per line.
+#: inc/engraving.php:124
+#, php-format
+msgid "Each engraving line fits at most %d characters."
+msgstr ""
+
+#: inc/engraving.php:138
+msgid "Choose the date for the star map."
+msgstr ""
+
+#: inc/engraving.php:141
+msgid "Choose the city for the star map."
+msgstr ""
+
+#: inc/engraving.php:173
+msgid "Star map"
+msgstr ""
+
+#: inc/engraving.php:183
+#: template-parts/product/card.php:19
+#: template-parts/product/engraving-fields.php:14
+msgid "Engraving"
+msgstr ""
+
+#: inc/engraving.php:187
+#: template-parts/product/engraving-fields.php:88
+msgid "Font"
+msgstr ""
+
+#: inc/options.php:10
+msgid "Phone"
+msgstr ""
+
+#: inc/options.php:14
+msgid "Email"
+msgstr ""
+
+#: inc/options.php:18
+msgid "Workshop address"
+msgstr ""
+
+#: inc/options.php:22
+msgid "Working hours"
+msgstr ""
+
+#: inc/options.php:26
+msgid "Instagram URL"
+msgstr ""
+
+#: inc/options.php:30
+msgid "Facebook URL"
+msgstr ""
+
+#: inc/options.php:34
+msgid "Telegram URL"
+msgstr ""
+
+#: inc/options.php:38
+msgid "Announcement bar text"
+msgstr ""
+
+#: inc/options.php:62
+#: inc/options.php:131
+msgid "Mitka settings"
+msgstr ""
+
+#: inc/options.php:82
+msgid "Contacts and header"
+msgstr ""
+
+#: inc/security.php:25
+msgid "Incorrect login details."
+msgstr ""
+
+#: inc/setup.php:16
+msgid "Primary navigation"
+msgstr ""
+
+#: inc/setup.php:17
+msgid "Footer: for buyers"
+msgstr ""
+
+#: inc/setup.php:18
+msgid "Footer: company"
+msgstr ""
+
+#: inc/taxonomies.php:11
+msgid "Makers"
+msgstr ""
+
+#: inc/taxonomies.php:12
+msgid "Maker"
+msgstr ""
+
+#: inc/taxonomies.php:13
+msgid "Add maker"
+msgstr ""
+
+#: inc/taxonomies.php:14
+msgid "Edit maker"
+msgstr ""
+
+#: inc/taxonomies.php:15
+msgid "Search makers"
+msgstr ""
+
+#: inc/taxonomies.php:31
+msgid "Occasions"
+msgstr ""
+
+#: inc/taxonomies.php:32
+msgid "Occasion"
+msgstr ""
+
+#: inc/taxonomies.php:33
+msgid "Add occasion"
+msgstr ""
+
+#: inc/taxonomies.php:34
+msgid "Edit occasion"
+msgstr ""
+
+#: inc/taxonomies.php:35
+msgid "Search occasions"
+msgstr ""
+
+#: inc/woocommerce.php:23
+msgid "Breadcrumbs"
+msgstr ""
+
+#: inc/woocommerce.php:27
+msgid "Home"
+msgstr ""
+
+#: index.php:19
+msgid "Nothing found."
+msgstr ""
+
+#: template-parts/footer/footer.php:10
+msgid "For buyers"
+msgstr ""
+
+#: template-parts/footer/footer.php:11
+msgid "Company"
+msgstr ""
+
+#: template-parts/footer/footer.php:18
+msgid "Engraved gifts and gift boxes from a small workshop in Lviv."
+msgstr ""
+
+#: template-parts/footer/footer.php:49
+msgid "Contacts"
+msgstr ""
+
+#: template-parts/footer/footer.php:68
+msgid "Payment on delivery via Nova Poshta"
+msgstr ""
+
+#: template-parts/header/actions.php:13
+msgid "Account"
+msgstr ""
+
+#: template-parts/header/actions.php:17
+msgid "Cart"
+msgstr ""
+
+#: template-parts/header/languages.php:19
+msgid "Language"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:11
+msgid "Menu"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:14
+msgid "Close menu"
+msgstr ""
+
+#: template-parts/header/mobile-menu.php:28
+msgid "All in category"
+msgstr ""
+
+#: template-parts/header/search.php:7
+msgid "Search products"
+msgstr ""
+
+#: template-parts/header/search.php:8
+msgid "Board, wallet, gift for dad…"
+msgstr ""
+
+#: template-parts/header/search.php:12
+msgid "Search"
+msgstr ""
+
+#. translators: %s: year the workshop was founded.
+#: template-parts/maker-card.php:23
+#: woocommerce/archive-product.php:34
+#, php-format
+msgid "since %s"
+msgstr ""
+
+#: template-parts/product/card.php:35
+msgid "Add to cart:"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:15
+msgid "free"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:20
+msgid "What to engrave"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:21
+msgid "Text"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:22
+msgid "Star map + text"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:32
+msgid "Your text here"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:40
+msgid "See it engraved"
+msgstr ""
+
+#. translators: %s: material name, e.g. Oak.
+#: template-parts/product/engraving-fields.php:46
+#, php-format
+msgid "Preview on %s"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:55
+msgid "Date"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:66
+msgid "The real sky over that city at 22:00 Kyiv time: every star you could see that night."
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:71
+msgid "Your text"
+msgstr ""
+
+#: template-parts/product/engraving-fields.php:72
+msgid "For Dad, with love"
+msgstr ""
+
+#. translators: 1: number of lines, 2: characters per line.
+#: template-parts/product/engraving-fields.php:78
+#, php-format
+msgid "Up to %1$d lines, %2$d characters each."
+msgstr ""
+
+#: woocommerce/archive-product.php:16
+#: woocommerce/single-product.php:81
+msgid "Workshop"
+msgstr ""
+
+#: woocommerce/archive-product.php:45
+msgid "Categories"
+msgstr ""
+
+#: woocommerce/archive-product.php:48
+msgid "All"
+msgstr ""
+
+#: woocommerce/archive-product.php:77
+msgid "Nothing found"
+msgstr ""
+
+#: woocommerce/archive-product.php:78
+msgid "Try a shorter word, check the spelling, or pick a category above."
+msgstr ""
+
+#: woocommerce/archive-product.php:90
+msgid "You might like"
+msgstr ""
+
+#. translators: %d: number of working days.
+#: woocommerce/single-product.php:53
+#, php-format
+msgid "Made and engraved in %d working day"
+msgid_plural "Made and engraved in %d working days"
+msgstr[0] ""
+msgstr[1] ""
+
+#: woocommerce/single-product.php:55
+msgid "In stock, ships the next working day"
+msgstr ""
+
+#: woocommerce/single-product.php:60
+msgid "Nova Poshta delivery across Ukraine, free from 1500 UAH"
+msgstr ""
+
+#: woocommerce/single-product.php:61
+msgid "Pay on delivery after you have checked the parcel"
+msgstr ""
+
+#: woocommerce/single-product.php:66
+msgid "Material:"
+msgstr ""
+
+#: woocommerce/single-product.php:76
+msgid "About this item"
+msgstr ""
+
+#: woocommerce/single-product.php:82
+msgid "Who made it"
+msgstr ""

@@ -1,0 +1,54 @@
+:root {
+	--c-bg: #fff;
+	--c-surface: #f4f4f1;
+	--c-ink: #151515;
+	--c-muted: #696964;
+	--c-line: #e2e1dc;
+	--c-laser: #e2492b;
+	--c-laser-strong: #c93a1e;
+	--c-ok: #2e7a4e;
+	--c-warn: #a86a00;
+	--c-error: #b3261e;
+	--c-on-ink: #fff;
+	--f-display: 'Unbounded', 'Manrope', system-ui, sans-serif;
+	--f-text: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+	--fs-xs: 0.8125rem;
+	--fs-sm: 0.875rem;
+	--fs-md: 1rem;
+	--fs-lg: 1.125rem;
+	--fs-xl: 1.375rem;
+	--fs-2xl: clamp(1.5rem, 1.2rem + 1.2vw, 1.75rem);
+	--fs-3xl: clamp(1.75rem, 1.3rem + 1.8vw, 2.25rem);
+	--fs-4xl: clamp(2rem, 1.3rem + 3vw, 3rem);
+	--fs-5xl: clamp(2.25rem, 1.2rem + 4.5vw, 4rem);
+	--s-1: 4px;
+	--s-2: 8px;
+	--s-3: 12px;
+	--s-4: 16px;
+	--s-5: 24px;
+	--s-6: 32px;
+	--s-7: 48px;
+	--s-8: 64px;
+	--s-9: 96px;
+	--r-input: 10px;
+	--r-card: 12px;
+	--r-sheet: 16px;
+	--r-pill: 999px;
+	--shadow-float: 0 12px 40px rgb(21 21 21 / 14%);
+	--ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+	--t-fast: 150ms;
+	--t-base: 250ms;
+	--t-slow: 400ms;
+	--container: 1320px;
+	--gutter: 16px;
+	--header-h: 64px;
+
+	@media (width >= 768px) {
+		--gutter: 24px;
+	}
+
+	@media (width >= 1024px) {
+		--gutter: 32px;
+		--header-h: 76px;
+	}
+}

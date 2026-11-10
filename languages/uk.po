@@ -1,0 +1,621 @@
+# Copyright (C) 2026 SashaShp
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: Mitka 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/mitka\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-11-10T08:55:34+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: mitka\n"
+"Language: uk\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2);\n"
+
+#: 404.php:8
+msgid "This page is not here"
+msgstr "Такої сторінки немає"
+
+#: 404.php:9
+msgid "The link may be old or have a typo. Try the search or start from the catalog."
+msgstr "Можливо, посилання застаріло або в ньому помилка. Спробуйте пошук або почніть з каталогу."
+
+#: 404.php:12
+msgid "Go to catalog"
+msgstr "До каталогу"
+
+#: 404.php:13
+msgid "Home page"
+msgstr "На головну"
+
+#: front-page.php:43
+msgid "Pick a gift"
+msgstr "Оберіть подарунок"
+
+#: front-page.php:44
+msgid "Boards, leather, glass and ready boxes from small Ukrainian workshops."
+msgstr "Дошки, шкіра, скло й готові бокси від невеликих українських майстерень."
+
+#: front-page.php:47
+msgid "Add your words"
+msgstr "Додайте свої слова"
+
+#: front-page.php:48
+msgid "Type a name, a date or a few warm words and see right away how the engraving will look."
+msgstr "Напишіть ім’я, дату чи кілька теплих слів і одразу побачите, як виглядатиме гравіювання."
+
+#: front-page.php:51
+msgid "We engrave and ship"
+msgstr "Гравіюємо й відправляємо"
+
+#: front-page.php:52
+msgid "Ready in 1–2 days, sent by Nova Poshta. You pay on delivery after checking it."
+msgstr "Готово за 1–2 дні, надсилаємо Новою Поштою. Оплата при отриманні, після огляду."
+
+#: front-page.php:59
+msgid "Laser workshop in Lviv"
+msgstr "Лазерна майстерня у Львові"
+
+#: front-page.php:60
+msgid "Gifts that carry your words"
+msgstr "Подарунки, що говорять вашими словами"
+
+#: front-page.php:61
+msgid "We engrave names, dates and wishes on things made by Ukrainian craftspeople, and pack them into boxes that are a joy to open."
+msgstr "Гравіюємо імена, дати й побажання на речах від українських майстрів і пакуємо їх у бокси, які приємно відкривати."
+
+#: front-page.php:63
+msgid "Choose a gift"
+msgstr "Обрати подарунок"
+
+#: front-page.php:65
+#: front-page.php:154
+msgid "Ready gift boxes"
+msgstr "Готові бокси"
+
+#: front-page.php:69
+msgid "1–2 days"
+msgstr "1–2 дні"
+
+#: front-page.php:69
+msgid "to engrave"
+msgstr "на гравіювання"
+
+#: front-page.php:70
+msgid "Free"
+msgstr "0 грн"
+
+#: front-page.php:70
+msgid "engraving on every item"
+msgstr "за гравіювання на будь-якій речі"
+
+#: front-page.php:71
+msgid "Payment"
+msgstr "Оплата"
+
+#: front-page.php:71
+msgid "on delivery"
+msgstr "при отриманні"
+
+#: front-page.php:81
+msgctxt "hero engraving sample"
+msgid "Home is you"
+msgstr "Дім — це ти"
+
+#: front-page.php:90
+#: header.php:24
+#: template-parts/footer/footer.php:23
+#: template-parts/header/mobile-menu.php:19
+msgid "Catalog"
+msgstr "Каталог"
+
+#: front-page.php:91
+msgid "All products"
+msgstr "Усі товари"
+
+#. translators: %d: number of products.
+#: front-page.php:101
+#, php-format
+msgid "%d product"
+msgid_plural "%d products"
+msgstr[0] "%d товар"
+msgstr[1] "%d товари"
+msgstr[2] "%d товарів"
+
+#: front-page.php:113
+msgid "Who is it for?"
+msgstr "Кому даруєте?"
+
+#: front-page.php:126
+msgid "Popular now"
+msgstr "Популярне зараз"
+
+#: front-page.php:127
+msgid "See all"
+msgstr "Дивитися всі"
+
+#: front-page.php:138
+msgid "How it works"
+msgstr "Як це працює"
+
+#: front-page.php:157
+msgid "All boxes"
+msgstr "Усі бокси"
+
+#: front-page.php:170
+msgid "The people who make it"
+msgstr "Люди, які це роблять"
+
+#: header.php:13
+msgid "Skip to content"
+msgstr "Перейти до вмісту"
+
+#: header.php:19
+msgid "Open menu"
+msgstr "Відкрити меню"
+
+#: header.php:30
+#: template-parts/header/mobile-menu.php:49
+msgid "Primary"
+msgstr "Головне"
+
+#: inc/checkout.php:21
+#: inc/checkout.php:55
+#: template-parts/product/engraving-fields.php:59
+msgid "City"
+msgstr "Місто"
+
+#: inc/checkout.php:22
+msgid "For example, Lviv"
+msgstr "Наприклад, Львів"
+
+#: inc/checkout.php:26
+#: inc/checkout.php:59
+msgid "Nova Poshta branch"
+msgstr "Відділення Нової Пошти"
+
+#: inc/checkout.php:27
+#: inc/checkout.php:60
+msgid "Branch or parcel locker number"
+msgstr "Номер відділення або поштомату"
+
+#: inc/checkout.php:92
+msgid "Enter the phone as +380 (XX) XXX XX XX."
+msgstr "Введіть телефон у форматі +380 (XX) XXX XX XX."
+
+#: inc/engraving.php:15
+msgid "Classic"
+msgstr "Класичний"
+
+#: inc/engraving.php:16
+msgid "Handwritten"
+msgstr "Рукописний"
+
+#: inc/engraving.php:17
+msgid "Modern"
+msgstr "Сучасний"
+
+#: inc/engraving.php:26
+msgid "Kyiv"
+msgstr "Київ"
+
+#: inc/engraving.php:27
+msgid "Lviv"
+msgstr "Львів"
+
+#: inc/engraving.php:28
+msgid "Kharkiv"
+msgstr "Харків"
+
+#: inc/engraving.php:29
+msgid "Odesa"
+msgstr "Одеса"
+
+#: inc/engraving.php:30
+msgid "Dnipro"
+msgstr "Дніпро"
+
+#: inc/engraving.php:31
+msgid "Zaporizhzhia"
+msgstr "Запоріжжя"
+
+#: inc/engraving.php:32
+msgid "Vinnytsia"
+msgstr "Вінниця"
+
+#: inc/engraving.php:33
+msgid "Poltava"
+msgstr "Полтава"
+
+#: inc/engraving.php:34
+msgid "Chernihiv"
+msgstr "Чернігів"
+
+#: inc/engraving.php:35
+msgid "Cherkasy"
+msgstr "Черкаси"
+
+#: inc/engraving.php:36
+msgid "Zhytomyr"
+msgstr "Житомир"
+
+#: inc/engraving.php:37
+msgid "Sumy"
+msgstr "Суми"
+
+#: inc/engraving.php:38
+msgid "Khmelnytskyi"
+msgstr "Хмельницький"
+
+#: inc/engraving.php:39
+msgid "Rivne"
+msgstr "Рівне"
+
+#: inc/engraving.php:40
+msgid "Lutsk"
+msgstr "Луцьк"
+
+#: inc/engraving.php:41
+msgid "Ternopil"
+msgstr "Тернопіль"
+
+#: inc/engraving.php:42
+msgid "Ivano-Frankivsk"
+msgstr "Івано-Франківськ"
+
+#: inc/engraving.php:43
+msgid "Uzhhorod"
+msgstr "Ужгород"
+
+#: inc/engraving.php:44
+msgid "Chernivtsi"
+msgstr "Чернівці"
+
+#: inc/engraving.php:45
+msgid "Kropyvnytskyi"
+msgstr "Кропивницький"
+
+#: inc/engraving.php:46
+msgid "Mykolaiv"
+msgstr "Миколаїв"
+
+#: inc/engraving.php:47
+msgid "Kherson"
+msgstr "Херсон"
+
+#: inc/engraving.php:48
+msgid "Kryvyi Rih"
+msgstr "Кривий Ріг"
+
+#: inc/engraving.php:49
+msgid "Bila Tserkva"
+msgstr "Біла Церква"
+
+#: inc/engraving.php:113
+msgid "This item cannot be engraved."
+msgstr "Цей товар не гравіюється."
+
+#. translators: %d: maximum number of lines.
+#: inc/engraving.php:119
+#, php-format
+msgid "Engraving fits at most %d lines."
+msgstr "Гравіювання вміщує не більше %d рядків."
+
+#. translators: %d: maximum characters per line.
+#: inc/engraving.php:124
+#, php-format
+msgid "Each engraving line fits at most %d characters."
+msgstr "У рядку гравіювання не більше %d символів."
+
+#: inc/engraving.php:138
+msgid "Choose the date for the star map."
+msgstr "Оберіть дату для зоряного неба."
+
+#: inc/engraving.php:141
+msgid "Choose the city for the star map."
+msgstr "Оберіть місто для зоряного неба."
+
+#: inc/engraving.php:173
+msgid "Star map"
+msgstr "Зоряне небо"
+
+#: inc/engraving.php:183
+#: template-parts/product/card.php:19
+#: template-parts/product/engraving-fields.php:14
+msgid "Engraving"
+msgstr "Гравіювання"
+
+#: inc/engraving.php:187
+#: template-parts/product/engraving-fields.php:88
+msgid "Font"
+msgstr "Шрифт"
+
+#: inc/options.php:10
+msgid "Phone"
+msgstr "Телефон"
+
+#: inc/options.php:14
+msgid "Email"
+msgstr "Email"
+
+#: inc/options.php:18
+msgid "Workshop address"
+msgstr "Адреса майстерні"
+
+#: inc/options.php:22
+msgid "Working hours"
+msgstr "Години роботи"
+
+#: inc/options.php:26
+msgid "Instagram URL"
+msgstr "Посилання на Instagram"
+
+#: inc/options.php:30
+msgid "Facebook URL"
+msgstr "Посилання на Facebook"
+
+#: inc/options.php:34
+msgid "Telegram URL"
+msgstr "Посилання на Telegram"
+
+#: inc/options.php:38
+msgid "Announcement bar text"
+msgstr "Текст смуги оголошень"
+
+#: inc/options.php:62
+#: inc/options.php:131
+msgid "Mitka settings"
+msgstr "Налаштування Mitka"
+
+#: inc/options.php:82
+msgid "Contacts and header"
+msgstr "Контакти й шапка"
+
+#: inc/security.php:25
+msgid "Incorrect login details."
+msgstr "Неправильні дані для входу."
+
+#: inc/setup.php:16
+msgid "Primary navigation"
+msgstr "Головна навігація"
+
+#: inc/setup.php:17
+msgid "Footer: for buyers"
+msgstr "Підвал: покупцям"
+
+#: inc/setup.php:18
+msgid "Footer: company"
+msgstr "Підвал: компанія"
+
+#: inc/taxonomies.php:11
+msgid "Makers"
+msgstr "Майстерні"
+
+#: inc/taxonomies.php:12
+msgid "Maker"
+msgstr "Майстерня"
+
+#: inc/taxonomies.php:13
+msgid "Add maker"
+msgstr "Додати майстерню"
+
+#: inc/taxonomies.php:14
+msgid "Edit maker"
+msgstr "Редагувати майстерню"
+
+#: inc/taxonomies.php:15
+msgid "Search makers"
+msgstr "Шукати майстерні"
+
+#: inc/taxonomies.php:31
+msgid "Occasions"
+msgstr "Приводи"
+
+#: inc/taxonomies.php:32
+msgid "Occasion"
+msgstr "Привід"
+
+#: inc/taxonomies.php:33
+msgid "Add occasion"
+msgstr "Додати привід"
+
+#: inc/taxonomies.php:34
+msgid "Edit occasion"
+msgstr "Редагувати привід"
+
+#: inc/taxonomies.php:35
+msgid "Search occasions"
+msgstr "Шукати приводи"
+
+#: inc/woocommerce.php:23
+msgid "Breadcrumbs"
+msgstr "Навігаційний ланцюжок"
+
+#: inc/woocommerce.php:27
+msgid "Home"
+msgstr "Головна"
+
+#: index.php:19
+msgid "Nothing found."
+msgstr "Нічого не знайдено."
+
+#: template-parts/footer/footer.php:10
+msgid "For buyers"
+msgstr "Покупцям"
+
+#: template-parts/footer/footer.php:11
+msgid "Company"
+msgstr "Компанія"
+
+#: template-parts/footer/footer.php:18
+msgid "Engraved gifts and gift boxes from a small workshop in Lviv."
+msgstr "Подарунки з гравіюванням і подарункові бокси від невеликої майстерні у Львові."
+
+#: template-parts/footer/footer.php:49
+msgid "Contacts"
+msgstr "Контакти"
+
+#: template-parts/footer/footer.php:68
+msgid "Payment on delivery via Nova Poshta"
+msgstr "Оплата при отриманні у Новій Пошті"
+
+#: template-parts/header/actions.php:13
+msgid "Account"
+msgstr "Кабінет"
+
+#: template-parts/header/actions.php:17
+msgid "Cart"
+msgstr "Кошик"
+
+#: template-parts/header/languages.php:19
+msgid "Language"
+msgstr "Мова"
+
+#: template-parts/header/mobile-menu.php:11
+msgid "Menu"
+msgstr "Меню"
+
+#: template-parts/header/mobile-menu.php:14
+msgid "Close menu"
+msgstr "Закрити меню"
+
+#: template-parts/header/mobile-menu.php:28
+msgid "All in category"
+msgstr "Усе в категорії"
+
+#: template-parts/header/search.php:7
+msgid "Search products"
+msgstr "Пошук товарів"
+
+#: template-parts/header/search.php:8
+msgid "Board, wallet, gift for dad…"
+msgstr "Дошка, гаманець, подарунок татові…"
+
+#: template-parts/header/search.php:12
+msgid "Search"
+msgstr "Шукати"
+
+#. translators: %s: year the workshop was founded.
+#: template-parts/maker-card.php:23
+#: woocommerce/archive-product.php:34
+#, php-format
+msgid "since %s"
+msgstr "з %s року"
+
+#: template-parts/product/card.php:35
+msgid "Add to cart:"
+msgstr "Додати в кошик:"
+
+#: template-parts/product/engraving-fields.php:15
+msgid "free"
+msgstr "безкоштовно"
+
+#: template-parts/product/engraving-fields.php:20
+msgid "What to engrave"
+msgstr "Що гравіюємо"
+
+#: template-parts/product/engraving-fields.php:21
+msgid "Text"
+msgstr "Текст"
+
+#: template-parts/product/engraving-fields.php:22
+msgid "Star map + text"
+msgstr "Зоряне небо + текст"
+
+#: template-parts/product/engraving-fields.php:32
+msgid "Your text here"
+msgstr "Ваш текст тут"
+
+#: template-parts/product/engraving-fields.php:40
+msgid "See it engraved"
+msgstr "Як гравіюємо"
+
+#. translators: %s: material name, e.g. Oak.
+#: template-parts/product/engraving-fields.php:46
+#, php-format
+msgid "Preview on %s"
+msgstr "Вигляд на матеріалі: %s"
+
+#: template-parts/product/engraving-fields.php:55
+msgid "Date"
+msgstr "Дата"
+
+#: template-parts/product/engraving-fields.php:66
+msgid "The real sky over that city at 22:00 Kyiv time: every star you could see that night."
+msgstr "Справжнє небо над цим містом о 22:00 за київським часом: кожна зірка, яку можна було побачити тієї ночі."
+
+#: template-parts/product/engraving-fields.php:71
+msgid "Your text"
+msgstr "Ваш текст"
+
+#: template-parts/product/engraving-fields.php:72
+msgid "For Dad, with love"
+msgstr "Татові, з любов’ю"
+
+#. translators: 1: number of lines, 2: characters per line.
+#: template-parts/product/engraving-fields.php:78
+#, php-format
+msgid "Up to %1$d lines, %2$d characters each."
+msgstr "До %1$d рядків, по %2$d символів."
+
+#: woocommerce/archive-product.php:16
+#: woocommerce/single-product.php:81
+msgid "Workshop"
+msgstr "Майстерня"
+
+#: woocommerce/archive-product.php:45
+msgid "Categories"
+msgstr "Категорії"
+
+#: woocommerce/archive-product.php:48
+msgid "All"
+msgstr "Усі"
+
+#: woocommerce/archive-product.php:77
+msgid "Nothing found"
+msgstr "Нічого не знайшли"
+
+#: woocommerce/archive-product.php:78
+msgid "Try a shorter word, check the spelling, or pick a category above."
+msgstr "Спробуйте коротше слово, перевірте написання або оберіть категорію вище."
+
+#: woocommerce/archive-product.php:90
+msgid "You might like"
+msgstr "Можливо, вам сподобається"
+
+#. translators: %d: number of working days.
+#: woocommerce/single-product.php:53
+#, php-format
+msgid "Made and engraved in %d working day"
+msgid_plural "Made and engraved in %d working days"
+msgstr[0] "Виготовимо й вигравіюємо за %d робочий день"
+msgstr[1] "Виготовимо й вигравіюємо за %d робочі дні"
+msgstr[2] "Виготовимо й вигравіюємо за %d робочих днів"
+
+#: woocommerce/single-product.php:55
+msgid "In stock, ships the next working day"
+msgstr "Є в наявності, відправимо наступного робочого дня"
+
+#: woocommerce/single-product.php:60
+msgid "Nova Poshta delivery across Ukraine, free from 1500 UAH"
+msgstr "Доставка Новою Поштою по Україні, безкоштовно від 1500 грн"
+
+#: woocommerce/single-product.php:61
+msgid "Pay on delivery after you have checked the parcel"
+msgstr "Оплата при отриманні, після огляду посилки"
+
+#: woocommerce/single-product.php:66
+msgid "Material:"
+msgstr "Матеріал:"
+
+#: woocommerce/single-product.php:76
+msgid "About this item"
+msgstr "Про товар"
+
+#: woocommerce/single-product.php:82
+msgid "Who made it"
+msgstr "Хто зробив"

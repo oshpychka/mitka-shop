@@ -1,0 +1,54 @@
+@use '../abstracts/mixins' as *;
+
+.breadcrumbs {
+	margin-bottom: var(--s-4);
+	font-size: var(--fs-sm);
+	color: var(--c-muted);
+}
+
+.breadcrumbs__list {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	li {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	li + li::before {
+		content: '';
+		width: 16px;
+		height: 16px;
+		margin-inline: var(--s-1);
+		background: currentcolor;
+		mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23000' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m9.5 6 6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+	}
+
+	a {
+		display: inline-flex;
+		align-items: center;
+		min-height: 44px;
+		color: var(--c-ink);
+		text-decoration: none;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+// On phones the current page is the H1 right below; dropping it keeps the trail on one line.
+@include down(md) {
+	.breadcrumbs__list li:last-child:not(:first-child) {
+		display: none;
+	}
+
+	// Only "Home" would be left: drop the trail entirely.
+	.breadcrumbs:has(li:nth-child(2):last-child) {
+		display: none;
+	}
+}
