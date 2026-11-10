@@ -117,9 +117,13 @@ add_filter(
 		array(
 			'posts_per_page' => 4,
 			'columns'        => 4,
+			'orderby'        => 'ID',
+			'order'          => 'asc',
 		)
 	)
 );
+// The same related products on every visit (and in every static export).
+add_filter( 'woocommerce_product_related_posts_shuffle', '__return_false' );
 add_filter( 'woocommerce_product_description_heading', '__return_empty_string' );
 
 // Ukrainian quotes in "Search results: “…”" (WooCommerce writes them as entities).
@@ -134,3 +138,11 @@ add_filter(
 	'woocommerce_get_breadcrumb',
 	fn( $crumbs ) => array_map( fn( $crumb ) => array( mitka_ukrainian_quotes( $crumb[0] ), $crumb[1] ), $crumbs )
 );
+
+// WooCommerce makes quantity field ids with uniqid(); a stable id keeps static exports identical.
+function mitka_quantity_input_id( $args, $product ) {
+	$name             = (string) ( $args['input_name'] ?? 'quantity' );
+	$args['input_id'] = 'quantity_' . ( $product ? $product->get_id() : 0 ) . '_' . substr( md5( $name ), 0, 6 );
+	return $args;
+}
+add_filter( 'woocommerce_quantity_input_args', 'mitka_quantity_input_id', 10, 2 );

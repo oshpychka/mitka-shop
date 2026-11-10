@@ -52,7 +52,7 @@ $mitka_menus   = array(
 					<li><a class="nowrap" href="<?php echo esc_url( mitka_phone_href( $mitka_phone ) ); ?>"><?php echo esc_html( $mitka_phone ); ?></a></li>
 				<?php endif; ?>
 				<?php if ( $mitka_email ) : ?>
-					<li><a href="mailto:<?php echo esc_attr( antispambot( $mitka_email ) ); ?>"><?php echo esc_html( antispambot( $mitka_email ) ); ?></a></li>
+					<li><a href="mailto:<?php echo esc_attr( mitka_antispambot( $mitka_email ) ); ?>"><?php echo esc_html( mitka_antispambot( $mitka_email ) ); ?></a></li>
 				<?php endif; ?>
 				<?php if ( $mitka_hours ) : ?>
 					<li class="site-footer__muted"><?php echo esc_html( $mitka_hours ); ?></li>

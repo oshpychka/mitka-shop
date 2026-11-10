@@ -27,6 +27,8 @@ $mitka_box_items  = $mitka_boxes ? wc_get_products(
 	array(
 		'status'   => 'publish',
 		'limit'    => 4,
+		'orderby'  => 'ID',
+		'order'    => 'ASC',
 		'category' => array( $mitka_boxes->slug ),
 	)
 ) : array();

@@ -29,3 +29,14 @@ function mitka_svg_kses() {
 function mitka_phone_href( $phone ) {
 	return 'tel:' . preg_replace( '/[^\d+]/', '', $phone );
 }
+
+/**
+ * antispambot() picks random encodings on every render, so static exports
+ * differed on every page. Seed it from the address to keep output stable.
+ */
+function mitka_antispambot( $email ) {
+	mt_srand( crc32( $email ) ); // phpcs:ignore WordPress.WP.AlternativeFunctions.rand_seeding_mt_srand -- deterministic output on purpose.
+	$encoded = antispambot( $email );
+	mt_srand(); // phpcs:ignore WordPress.WP.AlternativeFunctions.rand_seeding_mt_srand -- restore random seeding.
+	return $encoded;
+}
