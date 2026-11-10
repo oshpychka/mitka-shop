@@ -111,3 +111,55 @@ function mitka_drop_billing_prefix( $translation, $text, $context, $domain ) {
 	return $translation;
 }
 add_filter( 'gettext_with_context', 'mitka_drop_billing_prefix', 10, 4 );
+
+/**
+ * Shipping, payment and consent texts live in WooCommerce settings as one
+ * value for every language; serve them from the theme's translations instead.
+ */
+function mitka_rate_labels( $rates ) {
+	$labels = array(
+		'free_shipping' => __( 'Nova Poshta, free', 'mitka' ),
+		'flat_rate'     => __( 'Nova Poshta, at carrier rates', 'mitka' ),
+	);
+	foreach ( $rates as $rate ) {
+		if ( isset( $labels[ $rate->get_method_id() ] ) ) {
+			$rate->set_label( $labels[ $rate->get_method_id() ] );
+		}
+	}
+	return $rates;
+}
+add_filter( 'woocommerce_package_rates', 'mitka_rate_labels', 20 );
+
+function mitka_cod_title( $title, $gateway_id ) {
+	return 'cod' === $gateway_id ? __( 'Pay on delivery', 'mitka' ) : $title;
+}
+add_filter( 'woocommerce_gateway_title', 'mitka_cod_title', 10, 2 );
+
+function mitka_cod_description( $description, $gateway_id ) {
+	return 'cod' === $gateway_id ? __( 'You pay at the Nova Poshta branch after checking the parcel.', 'mitka' ) : $description;
+}
+add_filter( 'woocommerce_gateway_description', 'mitka_cod_description', 10, 2 );
+
+function mitka_cod_instructions( $order ) {
+	if ( 'cod' === $order->get_payment_method() ) {
+		echo wp_kses_post( wpautop( __( 'We will write to you when the order is ready to ship.', 'mitka' ) ) );
+	}
+}
+
+function mitka_cod_instructions_hook() {
+	$gateways = WC()->payment_gateways() ? WC()->payment_gateways()->payment_gateways() : array();
+	if ( isset( $gateways['cod'] ) ) {
+		remove_action( 'woocommerce_thankyou_cod', array( $gateways['cod'], 'thankyou_page' ) );
+		add_action( 'woocommerce_thankyou_cod', 'mitka_cod_instructions' );
+	}
+}
+add_action( 'woocommerce_init', 'mitka_cod_instructions_hook', 20 );
+
+add_filter( 'woocommerce_get_terms_and_conditions_checkbox_text', fn() => __( 'I accept the [terms]', 'mitka' ) );
+
+function mitka_privacy_text( $text, $type ) {
+	return 'checkout' === $type
+		? __( 'We need your details only to fulfil and deliver the order. More: [privacy_policy].', 'mitka' )
+		: __( 'We need your details for your account to work. More: [privacy_policy].', 'mitka' );
+}
+add_filter( 'woocommerce_get_privacy_policy_text', 'mitka_privacy_text', 10, 2 );

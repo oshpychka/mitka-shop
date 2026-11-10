@@ -459,7 +459,15 @@ function mitka_seed_menus() {
 
 mitka_seed_language();
 mitka_seed_settings();
+
+// WordPress sample content: "Hello world", "Sample Page" and the draft privacy page.
 wp_delete_post( 1, true );
+foreach ( array( 'sample-page', 'privacy-policy' ) as $mitka_sample ) {
+	$mitka_page = get_page_by_path( $mitka_sample );
+	if ( $mitka_page && 'en' !== ( function_exists( 'pll_get_post_language' ) ? pll_get_post_language( $mitka_page->ID ) : '' ) ) {
+		wp_delete_post( $mitka_page->ID, true );
+	}
+}
 mitka_seed_taxonomies( $mitka_taxonomies );
 mitka_seed_material_attribute( $mitka_materials );
 
@@ -472,4 +480,5 @@ mitka_seed_photos( $mitka_photos );
 
 mitka_seed_menus();
 mitka_seed_pages();
+require __DIR__ . '/seed-en.php';
 flush_rewrite_rules();

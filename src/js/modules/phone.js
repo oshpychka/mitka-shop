@@ -28,10 +28,12 @@ function normalize(raw) {
 // as a number of its own, so typing "+38 067…" or "0671…" over the prefilled
 // prefix works. Unambiguous: Ukrainian operator codes never start with 0, 38 or 80.
 function digitsOf(text) {
-	if (!text.startsWith('+380')) {
+	// The prefix can end up anywhere if a digit lands before it ("0+380 ").
+	const at = text.indexOf('+380');
+	if (at === -1) {
 		return normalize(text);
 	}
-	return normalize(text.slice(4)) || '380';
+	return normalize(text.slice(0, at) + text.slice(at + 4)) || '380';
 }
 
 function format(digits) {
@@ -77,10 +79,23 @@ function onInput(event) {
 	input.removeAttribute('aria-invalid');
 }
 
+function caretToEnd(input) {
+	const end = input.value.length;
+	input.setSelectionRange(end, end);
+}
+
 function onFocus(event) {
-	if (!event.target.value) {
-		event.target.value = PREFIX;
+	const input = event.target;
+	if (!input.value) {
+		input.value = PREFIX;
 	}
+	// Browsers place the caret on their own after focus; put it after the prefix.
+	caretToEnd(input);
+	requestAnimationFrame(() => {
+		if (document.activeElement === input && input.selectionStart < PREFIX.length) {
+			caretToEnd(input);
+		}
+	});
 }
 
 function onBlur(event) {

@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-10T08:55:34+00:00\n"
+"POT-Creation-Date: 2026-11-10T09:46:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mitka\n"
@@ -108,6 +108,8 @@ msgstr "Дім — це ти"
 
 #: front-page.php:90
 #: header.php:24
+#: inc/i18n.php:62
+#: inc/i18n.php:70
 #: template-parts/footer/footer.php:23
 #: template-parts/header/mobile-menu.php:19
 msgid "Catalog"
@@ -186,6 +188,38 @@ msgstr "Номер відділення або поштомату"
 #: inc/checkout.php:92
 msgid "Enter the phone as +380 (XX) XXX XX XX."
 msgstr "Введіть телефон у форматі +380 (XX) XXX XX XX."
+
+#: inc/checkout.php:121
+msgid "Nova Poshta, free"
+msgstr "Нова Пошта, безкоштовно"
+
+#: inc/checkout.php:122
+msgid "Nova Poshta, at carrier rates"
+msgstr "Нова Пошта, за тарифами перевізника"
+
+#: inc/checkout.php:134
+msgid "Pay on delivery"
+msgstr "Оплата при отриманні"
+
+#: inc/checkout.php:139
+msgid "You pay at the Nova Poshta branch after checking the parcel."
+msgstr "Оплачуєте замовлення у відділенні Нової Пошти після огляду."
+
+#: inc/checkout.php:145
+msgid "We will write to you when the order is ready to ship."
+msgstr "Ми напишемо, коли замовлення буде готове до відправки."
+
+#: inc/checkout.php:158
+msgid "I accept the [terms]"
+msgstr "Я приймаю [terms]"
+
+#: inc/checkout.php:162
+msgid "We need your details only to fulfil and deliver the order. More: [privacy_policy]."
+msgstr "Ваші дані потрібні лише для того, щоб виконати й доставити замовлення. Детальніше: [privacy_policy]."
+
+#: inc/checkout.php:163
+msgid "We need your details for your account to work. More: [privacy_policy]."
+msgstr "Ваші дані потрібні для роботи кабінету. Детальніше: [privacy_policy]."
 
 #: inc/engraving.php:15
 msgid "Classic"
@@ -295,41 +329,41 @@ msgstr "Кривий Ріг"
 msgid "Bila Tserkva"
 msgstr "Біла Церква"
 
-#: inc/engraving.php:113
+#: inc/engraving.php:115
 msgid "This item cannot be engraved."
 msgstr "Цей товар не гравіюється."
 
 #. translators: %d: maximum number of lines.
-#: inc/engraving.php:119
+#: inc/engraving.php:121
 #, php-format
 msgid "Engraving fits at most %d lines."
 msgstr "Гравіювання вміщує не більше %d рядків."
 
 #. translators: %d: maximum characters per line.
-#: inc/engraving.php:124
+#: inc/engraving.php:126
 #, php-format
 msgid "Each engraving line fits at most %d characters."
 msgstr "У рядку гравіювання не більше %d символів."
 
-#: inc/engraving.php:138
+#: inc/engraving.php:140
 msgid "Choose the date for the star map."
 msgstr "Оберіть дату для зоряного неба."
 
-#: inc/engraving.php:141
+#: inc/engraving.php:143
 msgid "Choose the city for the star map."
 msgstr "Оберіть місто для зоряного неба."
 
-#: inc/engraving.php:173
+#: inc/engraving.php:175
 msgid "Star map"
 msgstr "Зоряне небо"
 
-#: inc/engraving.php:183
+#: inc/engraving.php:185
 #: template-parts/product/card.php:19
 #: template-parts/product/engraving-fields.php:14
 msgid "Engraving"
 msgstr "Гравіювання"
 
-#: inc/engraving.php:187
+#: inc/engraving.php:189
 #: template-parts/product/engraving-fields.php:88
 msgid "Font"
 msgstr "Шрифт"

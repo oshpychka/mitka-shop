@@ -10,6 +10,7 @@ require MITKA_DIR . '/inc/cleanup.php';
 require MITKA_DIR . '/inc/security.php';
 require MITKA_DIR . '/inc/enqueue.php';
 require MITKA_DIR . '/inc/helpers.php';
+require MITKA_DIR . '/inc/i18n.php';
 require MITKA_DIR . '/inc/options.php';
 require MITKA_DIR . '/inc/taxonomies.php';
 require MITKA_DIR . '/inc/menus.php';

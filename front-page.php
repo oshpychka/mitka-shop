@@ -4,10 +4,10 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 $mitka_categories = mitka_top_categories();
-$mitka_boards     = get_term_by( 'slug', 'boards', 'product_cat' );
+$mitka_boards     = mitka_term( 'boards', 'product_cat' );
 $mitka_hero_image = $mitka_boards ? mitka_term_image_id( $mitka_boards ) : 0;
-$mitka_boxes      = get_term_by( 'slug', 'boxes', 'product_cat' );
-$mitka_shop_url   = wc_get_page_permalink( 'shop' );
+$mitka_boxes      = mitka_term( 'boxes', 'product_cat' );
+$mitka_shop_url   = mitka_shop_url();
 $mitka_occasions  = get_terms(
 	array(
 		'taxonomy'   => 'mitka_occasion',
@@ -27,14 +27,14 @@ $mitka_box_items  = $mitka_boxes ? wc_get_products(
 	array(
 		'status'   => 'publish',
 		'limit'    => 4,
-		'category' => array( 'boxes' ),
+		'category' => array( $mitka_boxes->slug ),
 	)
 ) : array();
 $mitka_makers     = get_terms(
 	array(
 		'taxonomy'   => 'mitka_maker',
 		'hide_empty' => true,
-		'exclude'    => array_filter( array( get_term_by( 'slug', 'mitka', 'mitka_maker' )->term_id ?? 0 ) ),
+		'exclude'    => array_filter( array( mitka_term( 'mitka', 'mitka_maker' )->term_id ?? 0 ) ),
 		'number'     => 6,
 	)
 );

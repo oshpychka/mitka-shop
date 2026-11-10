@@ -171,13 +171,20 @@
 	font-size: var(--fs-sm);
 	font-weight: 700;
 	text-decoration: none;
+	color: var(--c-muted);
+	transition:
+		background-color var(--t-fast) var(--ease),
+		color var(--t-fast) var(--ease);
 
+	// The active language reads as selected, like an active chip.
 	&.is-current {
-		color: var(--c-muted);
+		background: var(--c-ink);
+		color: var(--c-on-ink);
 	}
 
 	&:not(.is-current):hover {
 		background: var(--c-surface);
+		color: var(--c-ink);
 	}
 }
 

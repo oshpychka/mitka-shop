@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-11-10T08:55:34+00:00\n"
+"POT-Creation-Date: 2026-11-10T09:46:35+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: mitka\n"
@@ -127,6 +127,8 @@ msgstr ""
 
 #: front-page.php:90
 #: header.php:24
+#: inc/i18n.php:62
+#: inc/i18n.php:70
 #: template-parts/footer/footer.php:23
 #: template-parts/header/mobile-menu.php:19
 msgid "Catalog"
@@ -203,6 +205,38 @@ msgstr ""
 
 #: inc/checkout.php:92
 msgid "Enter the phone as +380 (XX) XXX XX XX."
+msgstr ""
+
+#: inc/checkout.php:121
+msgid "Nova Poshta, free"
+msgstr ""
+
+#: inc/checkout.php:122
+msgid "Nova Poshta, at carrier rates"
+msgstr ""
+
+#: inc/checkout.php:134
+msgid "Pay on delivery"
+msgstr ""
+
+#: inc/checkout.php:139
+msgid "You pay at the Nova Poshta branch after checking the parcel."
+msgstr ""
+
+#: inc/checkout.php:145
+msgid "We will write to you when the order is ready to ship."
+msgstr ""
+
+#: inc/checkout.php:158
+msgid "I accept the [terms]"
+msgstr ""
+
+#: inc/checkout.php:162
+msgid "We need your details only to fulfil and deliver the order. More: [privacy_policy]."
+msgstr ""
+
+#: inc/checkout.php:163
+msgid "We need your details for your account to work. More: [privacy_policy]."
 msgstr ""
 
 #: inc/engraving.php:15
@@ -313,41 +347,41 @@ msgstr ""
 msgid "Bila Tserkva"
 msgstr ""
 
-#: inc/engraving.php:113
+#: inc/engraving.php:115
 msgid "This item cannot be engraved."
 msgstr ""
 
 #. translators: %d: maximum number of lines.
-#: inc/engraving.php:119
+#: inc/engraving.php:121
 #, php-format
 msgid "Engraving fits at most %d lines."
 msgstr ""
 
 #. translators: %d: maximum characters per line.
-#: inc/engraving.php:124
+#: inc/engraving.php:126
 #, php-format
 msgid "Each engraving line fits at most %d characters."
 msgstr ""
 
-#: inc/engraving.php:138
+#: inc/engraving.php:140
 msgid "Choose the date for the star map."
 msgstr ""
 
-#: inc/engraving.php:141
+#: inc/engraving.php:143
 msgid "Choose the city for the star map."
 msgstr ""
 
-#: inc/engraving.php:173
+#: inc/engraving.php:175
 msgid "Star map"
 msgstr ""
 
-#: inc/engraving.php:183
+#: inc/engraving.php:185
 #: template-parts/product/card.php:19
 #: template-parts/product/engraving-fields.php:14
 msgid "Engraving"
 msgstr ""
 
-#: inc/engraving.php:187
+#: inc/engraving.php:189
 #: template-parts/product/engraving-fields.php:88
 msgid "Font"
 msgstr ""

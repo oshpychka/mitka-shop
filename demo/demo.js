@@ -4,8 +4,22 @@
 // - cart, checkout, account: a short notice instead of a page that cannot work.
 
 (() => {
-	const NOTICE = 'Це демо-версія сайту: кошик, оформлення й кабінет працюють у повній версії.';
-	const SERVER_PATHS = /^\/(cart|checkout|my-account)\//;
+	const EN = document.documentElement.lang.startsWith('en');
+	const T = EN
+		? {
+				notice: 'This is a demo of the site: cart, checkout and account work in the full version.',
+				engraved: (text) => `Engraving “${text}” would go to the cart. `,
+				nothing: (query) => `Nothing found for “${query}”. Try a shorter word.`,
+				index: '/search-index-en.json',
+			}
+		: {
+				notice: 'Це демо-версія сайту: кошик, оформлення й кабінет працюють у повній версії.',
+				engraved: (text) => `Гравіювання «${text}» потрапило б у кошик. `,
+				nothing: (query) => `За запитом «${query}» нічого не знайшли. Спробуйте коротше слово.`,
+				index: '/search-index.json',
+			};
+	const NOTICE = T.notice;
+	const SERVER_PATHS = /^\/(en\/)?(cart|checkout|my-account|basket|place-order|account)\//;
 	let toastTimer;
 	let index = null;
 
@@ -36,11 +50,13 @@
 				event.preventDefault();
 				event.stopImmediatePropagation();
 				const engraving = form.querySelector('[data-engrave-input]')?.value.trim();
-				toast(engraving ? `Гравіювання «${engraving.replace(/\n/g, ' / ')}» прийнято б у кошик. ${NOTICE}` : NOTICE);
+				toast(engraving ? T.engraved(engraving.replace(/\n/g, ' / ')) + NOTICE : NOTICE);
 			}
 			if (form.matches('.site-search')) {
 				event.preventDefault();
-				form.querySelector('input[type="search"]').dispatchEvent(new Event('input', { bubbles: true }));
+				form
+					.querySelector('input[type="search"]')
+					.dispatchEvent(new Event('input', { bubbles: true }));
 			}
 		},
 		true,
@@ -54,7 +70,10 @@
 				return;
 			}
 			const url = new URL(link.href, location.href);
-			if (url.origin === location.origin && (SERVER_PATHS.test(url.pathname) || url.searchParams.has('add-to-cart'))) {
+			if (
+				url.origin === location.origin &&
+				(SERVER_PATHS.test(url.pathname) || url.searchParams.has('add-to-cart'))
+			) {
 				event.preventDefault();
 				toast(NOTICE);
 			}
@@ -64,7 +83,7 @@
 
 	// Instant search.
 	async function loadIndex() {
-		index ||= fetch('/search-index.json').then((res) => res.json());
+		index ||= fetch(T.index).then((res) => res.json());
 		return index;
 	}
 
@@ -77,7 +96,7 @@
 		if (!items.length) {
 			const empty = document.createElement('p');
 			empty.className = 'demo-search__empty';
-			empty.textContent = `За запитом «${query}» нічого не знайшли. Спробуйте коротше слово.`;
+			empty.textContent = T.nothing(query);
 			panel.append(empty);
 			return;
 		}
@@ -85,7 +104,8 @@
 			const a = document.createElement('a');
 			a.className = 'demo-search__item';
 			a.href = item.url;
-			a.innerHTML = '<span class="demo-search__img"></span><span class="demo-search__text"><span class="demo-search__name"></span><span class="demo-search__meta"></span></span><span class="demo-search__price price"></span>';
+			a.innerHTML =
+				'<span class="demo-search__img"></span><span class="demo-search__text"><span class="demo-search__name"></span><span class="demo-search__meta"></span></span><span class="demo-search__price price"></span>';
 			if (item.image) {
 				const img = document.createElement('img');
 				img.src = item.image;

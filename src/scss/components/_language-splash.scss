@@ -1,0 +1,126 @@
+@use '../abstracts/mixins' as *;
+
+.lang-splash {
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	display: none;
+	place-items: center;
+	padding: var(--s-5) var(--gutter);
+	overflow-y: auto;
+	background:
+		radial-gradient(ellipse 60% 45% at 50% 0%, rgb(226 73 43 / 22%), transparent),
+		repeating-linear-gradient(0deg, rgb(255 255 255 / 3%) 0 1px, transparent 1px 4px),
+		var(--c-ink);
+	color: var(--c-on-ink);
+}
+
+.needs-lang {
+	overflow: hidden;
+
+	.lang-splash {
+		display: grid;
+		animation: lang-splash-in var(--t-slow) var(--ease);
+	}
+}
+
+.lang-splash__inner {
+	display: grid;
+	justify-items: center;
+	gap: var(--s-6);
+	width: 100%;
+	max-width: 640px;
+	text-align: center;
+}
+
+.lang-splash__logo {
+	color: var(--c-on-ink);
+	font-size: 2rem;
+}
+
+.lang-splash__title {
+	display: grid;
+	gap: var(--s-2);
+	margin: 0;
+	font-size: var(--fs-4xl);
+}
+
+.lang-splash__title-alt {
+	color: #b5b4ae;
+	font-family: var(--f-text);
+	font-size: var(--fs-lg);
+	font-weight: 500;
+	letter-spacing: 0;
+}
+
+.lang-splash__options {
+	display: grid;
+	gap: var(--s-3);
+	width: 100%;
+
+	@include up(sm) {
+		grid-template-columns: 1fr 1fr;
+		gap: var(--s-4);
+	}
+}
+
+.lang-splash__option {
+	display: grid;
+	justify-items: start;
+	gap: var(--s-1);
+	padding: var(--s-5);
+	border: 1px solid rgb(255 255 255 / 18%);
+	border-radius: var(--r-sheet);
+	background: rgb(255 255 255 / 4%);
+	color: var(--c-on-ink);
+	text-align: left;
+	text-decoration: none;
+	transition:
+		border-color var(--t-fast) var(--ease),
+		background-color var(--t-fast) var(--ease),
+		transform var(--t-fast) var(--ease);
+
+	&:hover {
+		border-color: var(--c-laser);
+		background: rgb(226 73 43 / 12%);
+		transform: translateY(-2px);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--c-on-ink);
+		outline-offset: 3px;
+	}
+}
+
+.lang-splash__code {
+	color: var(--c-laser);
+	font-size: var(--fs-xs);
+	font-weight: 700;
+	letter-spacing: 0.12em;
+}
+
+.lang-splash__name {
+	font-family: var(--f-display);
+	font-size: var(--fs-2xl);
+	font-weight: 600;
+	line-height: 1.2;
+}
+
+.lang-splash__hint {
+	color: #b5b4ae;
+	font-size: var(--fs-sm);
+}
+
+.lang-splash__note {
+	display: grid;
+	gap: var(--s-1);
+	margin: 0;
+	color: #8f8e88;
+	font-size: var(--fs-xs);
+}
+
+@keyframes lang-splash-in {
+	from {
+		opacity: 0;
+	}
+}

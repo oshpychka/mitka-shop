@@ -4,12 +4,14 @@ import { initMegaMenu } from './modules/mega-menu.js';
 import { initEngraving } from './modules/engraving.js';
 import { initPhoneMask } from './modules/phone.js';
 import { initQuantity } from './modules/quantity.js';
+import { initLanguage } from './modules/language.js';
 
 initDrawers();
 initMegaMenu();
 initEngraving();
 initPhoneMask();
 initQuantity();
+initLanguage();
 
 // WooCommerce redraws the checkout and cart with jQuery; re-apply after it does.
 if (window.jQuery) {

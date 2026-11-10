@@ -6,7 +6,7 @@ get_header();
 $mitka_term       = is_product_taxonomy() ? get_queried_object() : null;
 $mitka_is_maker   = $mitka_term && 'mitka_maker' === $mitka_term->taxonomy;
 $mitka_categories = mitka_top_categories();
-$mitka_shop_url   = wc_get_page_permalink( 'shop' );
+$mitka_shop_url   = mitka_shop_url();
 ?>
 <div class="container section catalog">
 	<?php get_template_part( 'template-parts/breadcrumbs' ); ?>

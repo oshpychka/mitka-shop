@@ -51,7 +51,8 @@ function mitka_star_cities() {
 }
 
 function mitka_supports_star_map( $product ) {
-	return has_term( MITKA_STAR_MAP_CATEGORIES, 'product_cat', $product->get_id() );
+	$slugs = array_merge( MITKA_STAR_MAP_CATEGORIES, array_map( fn( $slug ) => $slug . '-en', MITKA_STAR_MAP_CATEGORIES ) );
+	return has_term( $slugs, 'product_cat', $product->get_id() );
 }
 
 /**
@@ -66,6 +67,7 @@ function mitka_engraving_tone( $product ) {
 		'ceramic' => 'ceramic',
 	);
 	foreach ( wc_get_product_terms( $product->get_id(), 'pa_material', array( 'fields' => 'slugs' ) ) as $material ) {
+		$material = preg_replace( '/-en$/', '', $material );
 		if ( isset( $tones[ $material ] ) ) {
 			return $tones[ $material ];
 		}

@@ -124,6 +124,9 @@ add_filter( 'woocommerce_product_description_heading', '__return_empty_string' )
 
 // Ukrainian quotes in "Search results: “…”" (WooCommerce writes them as entities).
 function mitka_ukrainian_quotes( $text ) {
+	if ( 'uk' !== mitka_lang() ) {
+		return str_replace( array( '&ldquo;', '&rdquo;' ), array( '“', '”' ), $text );
+	}
 	return str_replace( array( '&ldquo;', '&rdquo;', '“', '”' ), array( '«', '»', '«', '»' ), $text );
 }
 add_filter( 'woocommerce_page_title', 'mitka_ukrainian_quotes' );

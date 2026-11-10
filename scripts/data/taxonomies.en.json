@@ -1,0 +1,64 @@
+{
+	"categories": {
+		"boards": { "name": "Boards and kitchen", "description": "Cutting and serving boards, spatulas and stands in oak, walnut and beech. We engrave names, dates and recipes." },
+		"leather": { "name": "Leather", "description": "Wallets, covers, belts and keychains in vegetable-tanned leather. Embossing and laser engraving." },
+		"watches": { "name": "Watches and accessories", "description": "Wrist and pocket watches, cufflinks and tie clips with an engraved lid." },
+		"office": { "name": "Office and notebooks", "description": "Notebooks, pens, stands and organisers for the desk with your logo or initials." },
+		"decor": { "name": "Home decor", "description": "Signs, frames, key holders and night lights that make a home yours." },
+		"drinkware": { "name": "Glasses, flasks, mugs", "description": "Glass, steel and ceramics: wine glasses, flasks, travel mugs and mugs with engraving." },
+		"boxes": { "name": "Gift boxes", "description": "Gift sets we put together. Want to swap something? Write to us and we will build one for you." },
+		"fillings": { "name": "Box fillings", "description": "Honey, coffee, tea, chocolate and candles from small makers. Add them to your box." }
+	},
+	"makers": {
+		"dubovyi-dvir": { "name": "Dubovyi Dvir", "city": "Lviv", "story": "A two-person joinery. They dry their own oak and walnut, so the boards do not warp even after years of washing." },
+		"paliturnia": { "name": "Podil Bindery", "city": "Kyiv", "story": "They started by binding diplomas and now hand-sew notebooks and leather goods with waxed thread." },
+		"hart": { "name": "Hart", "city": "Dnipro", "story": "A small metal shop. Flasks, cufflinks and signs in stainless steel that never tarnishes." },
+		"sklo-verkhovyny": { "name": "Verkhovyna Glass", "city": "Uzhhorod", "story": "They blow glass by hand, so every glass differs a little from its neighbour." },
+		"hlynianyi-hlek": { "name": "Clay Jug", "city": "Poltava", "story": "Third-generation potters. Mugs and plates from local clay with a food-safe glaze." },
+		"bort": { "name": "Bort", "city": "Vinnytsia", "story": "An apiary of 120 hives by the Southern Bug. The honey is never heated or blended." },
+		"obsmazhka-14": { "name": "Obsmazhka 14", "city": "Lviv", "story": "A micro-roastery. They roast small batches every Friday, so the coffee arrives fresh." },
+		"chainyi-lyst": { "name": "Tea Leaf", "city": "Odesa", "story": "They blend herbal teas from Carpathian herbs and buy loose-leaf tea from small farms." },
+		"kakao-bib": { "name": "Cocoa Bean", "city": "Kharkiv", "story": "Bean-to-bar chocolate: they roast the cocoa beans and temper the chocolate by hand." },
+		"teplyi-visk": { "name": "Warm Wax", "city": "Ivano-Frankivsk", "story": "Candles from soy and beeswax with cotton wicks, no paraffin." },
+		"mitka": { "name": "Mitka Workshop", "city": "Lviv", "story": "Our own laser workshop. This is where we engrave everything you order and pack the boxes." }
+	},
+	"occasions": {
+		"for-him": "For him",
+		"for-her": "For her",
+		"birthday": "Birthday",
+		"wedding": "Wedding and anniversary",
+		"colleagues": "Colleagues and partners",
+		"new-home": "Housewarming",
+		"teacher": "For a teacher",
+		"christmas": "New Year and Christmas"
+	},
+	"materials": {
+		"oak": "Oak",
+		"walnut": "Walnut",
+		"beech": "Beech",
+		"acacia": "Acacia",
+		"bamboo": "Bamboo",
+		"plywood": "Plywood",
+		"leather": "Leather",
+		"canvas": "Cotton",
+		"linen": "Linen",
+		"steel": "Steel",
+		"glass": "Glass",
+		"ceramic": "Ceramic",
+		"acrylic": "Acrylic",
+		"honey": "Honey",
+		"coffee": "Coffee",
+		"tea": "Tea",
+		"chocolate": "Chocolate",
+		"candle": "Wax",
+		"box": "Set"
+	},
+	"labels": {
+		"size": "Size",
+		"color": "Colour",
+		"pattern": "Pattern",
+		"paper": "Paper",
+		"material": "Material",
+		"scent": "Scent"
+	}
+}

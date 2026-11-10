@@ -97,15 +97,24 @@
 
 .card__foot {
 	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: space-between;
 	gap: var(--s-2);
 	margin-top: auto;
 }
 
+// Old and new price wrap inside the price, so the bag button keeps its place.
 .card__price {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: var(--s-2);
+	min-width: 0;
+	white-space: normal;
 	font-size: var(--fs-md);
+
+	del {
+		margin-right: 0;
+	}
 
 	@include up(md) {
 		font-size: var(--fs-lg);

@@ -8,6 +8,7 @@
 // the browser by demo.js: instant search over a product index, and a notice
 // instead of adding to cart.
 
+import { execFileSync } from 'node:child_process';
 import { copyFile, mkdir, readdir, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -17,10 +18,10 @@ const root = dirname(dirname(fileURLToPath(import.meta.url)));
 const out = join(root, 'demo');
 
 // Server-only pages: links to them stay, demo.js intercepts the clicks.
-const SKIP_PAGES = [/^\/wp-(admin|login|json|cron)/, /^\/xmlrpc/, /^\/(cart|checkout|my-account)\//, /^\/feed\//, /\/feed\/$/];
+const SKIP_PAGES = [/^\/wp-(admin|login|json|cron)/, /^\/xmlrpc/, /^\/(en\/)?(cart|checkout|my-account|basket|place-order|account)\//, /^\/feed\//, /\/feed\/$/];
 const TEXT = /\.(html|css|js|json|svg|txt|xml)$/;
 
-const queue = ['/', '/catalog/'];
+const queue = ['/', '/catalog/', '/en/', '/en/catalog/'];
 const seen = new Set(queue);
 const failed = [];
 
@@ -109,44 +110,28 @@ async function fetchOne(path) {
 	}
 }
 
-// Price text from the Store API's numbers (price_html carries screen-reader text).
-function prices(product) {
-	const { prices: p, on_sale: onSale } = product;
-	const money = (amount) => {
-		const value = Number(amount) / 10 ** p.currency_minor_unit;
-		const number = value.toLocaleString('uk-UA', { minimumFractionDigits: p.currency_minor_unit }).replace(/\s/g, '\u00a0');
-		return `${p.currency_prefix}${number}${p.currency_suffix || `\u00a0${p.currency_symbol}`}`;
-	};
-	const range = p.price_range;
-	if (range && range.min_amount !== range.max_amount) {
-		return { price: `${money(range.min_amount)} – ${money(range.max_amount)}` };
+// Search index per language, built inside WordPress (see scripts/demo/index.php).
+function productIndex() {
+	const output = execFileSync('npx', ['wp-env', 'run', 'cli', 'wp', 'eval-file', 'wp-content/themes/mitka/scripts/demo/index.php'], {
+		cwd: root,
+		encoding: 'utf8',
+		stdio: ['ignore', 'pipe', 'ignore'],
+	});
+	const line = output.split('\n').find((l) => l.startsWith('MITKA_INDEX:'));
+	if (!line) {
+		throw new Error('Search index script printed nothing.');
 	}
-	return { price: money(p.price), ...(onSale && p.regular_price !== p.price && { old: money(p.regular_price) }) };
-}
-
-async function productIndex() {
-	const items = [];
-	for (let page = 1; ; page++) {
-		const res = await fetch(`${ORIGIN}/wp-json/wc/store/v1/products?per_page=100&page=${page}`);
-		const batch = await res.json();
-		items.push(
-			...batch.map((p) => ({
-				name: p.name,
-				url: rewrite(p.permalink),
-				image: rewrite(p.images[0]?.thumbnail ?? ''),
-				...prices(p),
-				category: p.categories.map((c) => c.name).join(', '),
-			})),
-		);
-		for (const item of items.slice(-batch.length)) {
+	const index = JSON.parse(line.slice('MITKA_INDEX:'.length));
+	for (const items of Object.values(index)) {
+		for (const item of items) {
+			item.url = rewrite(item.url);
+			item.image = rewrite(item.image);
 			if (item.image) {
 				enqueue(item.image, ORIGIN);
 			}
 		}
-		if (batch.length < 100) {
-			return items;
-		}
 	}
+	return index;
 }
 
 await rm(out, { recursive: true, force: true });
@@ -156,7 +141,7 @@ for (const file of await readdir(join(root, 'assets/build'))) {
 	enqueue(`/wp-content/themes/mitka/assets/build/${file}`, ORIGIN);
 }
 
-const index = await productIndex();
+const index = productIndex();
 
 while (queue.length) {
 	const batch = queue.splice(0, 8);
@@ -167,13 +152,14 @@ while (queue.length) {
 const notFound = await fetch(`${ORIGIN}/demo-404-page/`);
 await writeFile(join(out, '404.html'), rewrite(await notFound.text()).replace('</head>', `${demoTag}</head>`));
 
-await writeFile(join(out, 'search-index.json'), JSON.stringify(index));
+await writeFile(join(out, 'search-index.json'), JSON.stringify(index.uk));
+await writeFile(join(out, 'search-index-en.json'), JSON.stringify(index.en));
 await copyFile(join(root, 'scripts/demo/demo.js'), join(out, 'demo.js'));
 await copyFile(join(root, 'scripts/demo/demo.css'), join(out, 'demo.css'));
 await writeFile(join(out, 'vercel.json'), `${JSON.stringify({ cleanUrls: false, trailingSlash: true }, null, '\t')}\n`);
 await writeFile(join(out, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
-console.log(`Exported ${seen.size} files and ${index.length} products to demo/.`);
+console.log(`Exported ${seen.size} files, ${index.uk.length} + ${index.en.length} products to demo/.`);
 if (failed.length) {
 	console.log(`Not exported:\n  ${failed.join('\n  ')}`);
 }
