@@ -11,3 +11,4 @@ playwright-report/
 Thumbs.db
 .vscode/
 .idea/
+scripts/data/photo-candidates.json

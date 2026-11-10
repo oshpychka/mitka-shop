@@ -9,7 +9,7 @@
 // instead of adding to cart.
 
 import { execFileSync } from 'node:child_process';
-import { copyFile, mkdir, readdir, rm, writeFile } from 'node:fs/promises';
+import { copyFile, mkdir, readFile, readdir, rm, writeFile } from 'node:fs/promises';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -158,6 +158,16 @@ await copyFile(join(root, 'scripts/demo/demo.js'), join(out, 'demo.js'));
 await copyFile(join(root, 'scripts/demo/demo.css'), join(out, 'demo.css'));
 await writeFile(join(out, 'vercel.json'), `${JSON.stringify({ cleanUrls: false, trailingSlash: true }, null, '\t')}\n`);
 await writeFile(join(out, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
+
+// Notices for third-party material shipped in the copy.
+const photos = JSON.parse(await readFile(join(root, 'scripts/data/photos.json'), 'utf8'));
+const credits = Object.entries(photos)
+	.map(([slug, photo]) => `${slug}: ${photo.author} — ${photo.author_url.split('?')[0]}`)
+	.join('\n');
+await mkdir(join(out, 'licenses'), { recursive: true });
+await writeFile(join(out, 'licenses/photos.txt'), `Product photos from Unsplash (https://unsplash.com/license), placeholders for the demo.\n\n${credits}\n`);
+await copyFile(join(root, 'src/js/data/sky.LICENSE.txt'), join(out, 'licenses/star-data.txt'));
+await copyFile(join(root, 'assets/fonts/LICENSE.md'), join(out, 'licenses/fonts.md'));
 
 console.log(`Exported ${seen.size} files, ${index.uk.length} + ${index.en.length} products to demo/.`);
 if (failed.length) {
